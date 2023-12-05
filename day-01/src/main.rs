@@ -22,6 +22,7 @@ fn sum_calibration_values(calibration_values: Vec<String>) -> i32 {
         .iter()
         .map(|value| {
             let mut numbers: Vec<char> = vec![];
+            // TODO: It's faster to iterate from start and end and stop if first and last were found
             for character in value.chars() {
                 if character.is_numeric() {
                     numbers.push(character);
